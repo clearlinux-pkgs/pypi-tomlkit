@@ -4,12 +4,12 @@
 #
 Name     : tomlkit
 Version  : 0.7.0
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/64/e0/6c8c96024d118cb029a97752e9a6d70bd06e4fd4c8b00fd9446ad6178f1d/tomlkit-0.7.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/64/e0/6c8c96024d118cb029a97752e9a6d70bd06e4fd4c8b00fd9446ad6178f1d/tomlkit-0.7.0.tar.gz
 Summary  : Style preserving TOML library
 Group    : Development/Tools
-License  : MIT
+License  : ISC MIT
 Requires: tomlkit-license = %{version}-%{release}
 Requires: tomlkit-python = %{version}-%{release}
 Requires: tomlkit-python3 = %{version}-%{release}
@@ -62,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1616512595
+export SOURCE_DATE_EPOCH=1621275790
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -79,16 +79,23 @@ export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/tomlkit
 cp %{_builddir}/tomlkit-0.7.0/LICENSE %{buildroot}/usr/share/package-licenses/tomlkit/84661790a5df00ab944c2d37978d6ce5ac88e554
+cp %{_builddir}/tomlkit-0.7.0/tests/toml-spec-tests/LICENSE %{buildroot}/usr/share/package-licenses/tomlkit/7ad2173ba59937a324cdfe33686e42e2f29ee6ae
+cp %{_builddir}/tomlkit-0.7.0/tests/toml-test/COPYING %{buildroot}/usr/share/package-licenses/tomlkit/7a82386b25eb7b8b4fbfd8427349ad9cdddf026d
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
+## install_append content
+rm -rf %{buildroot}/usr/lib/python3*/site-packages/tests
+## install_append end
 
 %files
 %defattr(-,root,root,-)
 
 %files license
 %defattr(0644,root,root,0755)
+/usr/share/package-licenses/tomlkit/7a82386b25eb7b8b4fbfd8427349ad9cdddf026d
+/usr/share/package-licenses/tomlkit/7ad2173ba59937a324cdfe33686e42e2f29ee6ae
 /usr/share/package-licenses/tomlkit/84661790a5df00ab944c2d37978d6ce5ac88e554
 
 %files python
