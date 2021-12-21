@@ -1,5 +1,5 @@
 PKG_NAME := tomlkit
-URL = https://files.pythonhosted.org/packages/65/ed/7b7216101bc48627b630693b03392f33827901b81d4e1360a76515e3abc4/tomlkit-0.7.2.tar.gz
+URL = https://files.pythonhosted.org/packages/0f/96/ee6ba35c61186fbf084cb3077374d50eef36ab59cb8c6513317caa190935/tomlkit-0.8.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
