@@ -4,7 +4,7 @@
 #
 Name     : pypi-tomlkit
 Version  : 0.10.0
-Release  : 12
+Release  : 13
 URL      : https://files.pythonhosted.org/packages/c7/f0/cc387a2ff7da8f9450d6af4c108bed1f9b7289695330b6b5f412ebc8d6aa/tomlkit-0.10.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c7/f0/cc387a2ff7da8f9450d6af4c108bed1f9b7289695330b6b5f412ebc8d6aa/tomlkit-0.10.0.tar.gz
 Summary  : Style preserving TOML library
@@ -14,7 +14,6 @@ Requires: pypi-tomlkit-license = %{version}-%{release}
 Requires: pypi-tomlkit-python = %{version}-%{release}
 Requires: pypi-tomlkit-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : buildreq-golang
 BuildRequires : pypi(poetry_core)
 
 %description
@@ -60,7 +59,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1645215728
+export SOURCE_DATE_EPOCH=1647883467
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
