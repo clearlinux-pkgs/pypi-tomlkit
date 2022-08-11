@@ -4,7 +4,7 @@
 #
 Name     : pypi-tomlkit
 Version  : 0.11.3
-Release  : 21
+Release  : 22
 URL      : https://files.pythonhosted.org/packages/f6/33/e5e55afcc6e062ba706a0492460f5702955d077adbcaf561d04799b412d5/tomlkit-0.11.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f6/33/e5e55afcc6e062ba706a0492460f5702955d077adbcaf561d04799b412d5/tomlkit-0.11.3.tar.gz
 Summary  : Style preserving TOML library
