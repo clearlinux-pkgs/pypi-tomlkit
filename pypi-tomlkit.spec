@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-tomlkit
-Version  : 0.11.7
-Release  : 31
-URL      : https://files.pythonhosted.org/packages/4d/4e/6cb8a301134315e37929763f7a45c3598dfb21e8d9b94e6846c87531886c/tomlkit-0.11.7.tar.gz
-Source0  : https://files.pythonhosted.org/packages/4d/4e/6cb8a301134315e37929763f7a45c3598dfb21e8d9b94e6846c87531886c/tomlkit-0.11.7.tar.gz
+Version  : 0.11.8
+Release  : 32
+URL      : https://files.pythonhosted.org/packages/10/37/dd53019ccb72ef7d73fff0bee9e20b16faff9658b47913a35d79e89978af/tomlkit-0.11.8.tar.gz
+Source0  : https://files.pythonhosted.org/packages/10/37/dd53019ccb72ef7d73fff0bee9e20b16faff9658b47913a35d79e89978af/tomlkit-0.11.8.tar.gz
 Summary  : Style preserving TOML library
 Group    : Development/Tools
 License  : ISC MIT
@@ -55,10 +55,10 @@ python3 components for the pypi-tomlkit package.
 
 
 %prep
-%setup -q -n tomlkit-0.11.7
-cd %{_builddir}/tomlkit-0.11.7
+%setup -q -n tomlkit-0.11.8
+cd %{_builddir}/tomlkit-0.11.8
 pushd ..
-cp -a tomlkit-0.11.7 buildavx2
+cp -a tomlkit-0.11.8 buildavx2
 popd
 
 %build
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680136063
+export SOURCE_DATE_EPOCH=1682608430
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
